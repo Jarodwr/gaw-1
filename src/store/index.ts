@@ -16,8 +16,8 @@ export const initialDate = new Date("1/1/1995")
 
 export const useStore = createBasicStore<StoreType>({
   roomMates: [],
-  money: 10000,
-  rent: 600,
+  money: 5000,
+  rent: 800,
   date: initialDate,
   bankLineItems: [],
   rentalHistory: [],

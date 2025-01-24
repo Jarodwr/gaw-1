@@ -17,10 +17,11 @@ const squabbleEventMessages = [
   "keeps hitting on my friends, kick them out",
 ]
 
-export const generateNextMessengerEvent = (mates: RoomMate[]): MessengerEvent => {
+export const generateNextMessengerEvent = (mates: RoomMate[]): MessengerEvent | undefined => {
+  if (mates.length === 0) return undefined
   const fromMateIndex = getRandomInt(0, mates.length - 1);
 
-  switch (getRandomInt(0, 1)) {
+  switch (mates.length === 1 ? 0 : getRandomInt(0, 1)) {
     case 0:
       // Cost only event
       return ({

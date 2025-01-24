@@ -14,7 +14,7 @@ export const RentalEventWindow = () => {
       state.bankLineItems.push({
         description: 'rent',
         date: new Date(state.date),
-        amount: -state.money
+        amount: -state.rent
       });
       for (const person of state.roomMates) {
         state.bankLineItems.push({

@@ -19,7 +19,7 @@ export const RentalHistorianWindow = () => {
         <TableBody>
           {history.map((item, i) =>
             <TableRow key={i}>
-              <TableDataCell>{item.roomMate.fullName}</TableDataCell>
+              <TableDataCell>{item.roomMate?.fullName}</TableDataCell>
               <TableDataCell>{item.duration}m</TableDataCell>
               <TableDataCell>{item.mood}</TableDataCell>
             </TableRow>)}
