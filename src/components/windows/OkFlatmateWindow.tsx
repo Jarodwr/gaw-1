@@ -14,6 +14,8 @@ import {
 import { RoomMate } from "../../types/RoomMate";
 import { useStore } from "../../store";
 import { getRandomInt } from "../../helper/getRandomInt";
+import { spriteslookup } from "../../helper/spriteslookup";
+
 
 enum ActiveTabEnum {
   PROFILE = "profile",
@@ -22,7 +24,7 @@ enum ActiveTabEnum {
 
 function generateNewCharacter() {
   return ({
-    avatarUrl: `/src/assets/characters/row-${getRandomInt(1, 20)}-column-${getRandomInt(1, 16)}.png`,
+    avatarUrl: spriteslookup[getRandomInt(0, spriteslookup.length - 1)],
     bio: faker.person.bio(),
     fullName: faker.person.fullName(),
     sex: faker.person.sex(),
