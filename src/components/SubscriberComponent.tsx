@@ -56,8 +56,28 @@ export const SubscriberComponent = () => {
 
     if (nextRentEvent)
       state.currentRentEvent = nextRentEvent;
-    if (nextMessengerEvent)
+    if (nextMessengerEvent) {
+      if (state.currentMessengerEvent) {
+        if (state.currentMessengerEvent.concerningMateIndex !== undefined) {
+          state.rentalHistory.push({
+            roomMate: state.roomMates[state.currentMessengerEvent.fromMateIndex],
+            duration: getRandomInt(1, 10),
+            mood: "sad"
+          })
+          state.roomMates.splice(state.currentMessengerEvent.fromMateIndex, 1);
+          state.currentMessengerEvent = undefined;
+        } else {
+          const from = state.roomMates[state.currentMessengerEvent.fromMateIndex]
+          state.bankLineItems.push({
+            amount: -(state.currentMessengerEvent?.cost ?? 0),
+            description: `Pay back ${from?.fullName}`,
+            date: new Date(state.date)
+          })
+          state.currentMessengerEvent = undefined;
+        }
+      }
       state.currentMessengerEvent = nextMessengerEvent
+    }
     if (nextBankLineItem) {
       state.money += nextBankLineItem.amount
       state.bankLineItems.push(nextBankLineItem);

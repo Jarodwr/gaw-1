@@ -11,10 +11,10 @@ const costOnlyEventMessages = [
 ];
 
 const squabbleEventMessages = [
-  "They never clean up, it's me or them",
-  "It's way too loud here, either they go or I do",
-  "This person absolutely sucks, if you don't get rid of them I'm gone",
-  "They keep hitting on my friends, kick them out",
+  "never cleans up, it's me or them",
+  "makes it way too loud here, either they go or I do",
+  "absolutely sucks, if you don't get rid of them I'm gone",
+  "keeps hitting on my friends, kick them out",
 ]
 
 export const generateNextMessengerEvent = (mates: RoomMate[]): MessengerEvent => {
