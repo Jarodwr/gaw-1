@@ -1,4 +1,3 @@
-import React from "react";
 import { Separator, Table, TableBody, TableDataCell, TableHead, TableHeadCell, TableRow } from "react95";
 import { useStore } from "../../store";
 import { shallow } from "zustand/shallow";

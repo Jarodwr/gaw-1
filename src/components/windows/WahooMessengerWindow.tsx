@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Frame } from "react95";
 
 export const WahooMessengerWindow = () => {

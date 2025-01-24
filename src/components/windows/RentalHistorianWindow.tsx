@@ -1,5 +1,4 @@
-import React from "react";
-import { Separator, Table, TableBody, TableDataCell, TableHead, TableHeadCell, TableRow, TextInput } from "react95";
+import { Table, TableBody, TableDataCell, TableHead, TableHeadCell, TableRow } from "react95";
 import { useStore } from "../../store";
 
 export const RentalHistorianWindow = () => {

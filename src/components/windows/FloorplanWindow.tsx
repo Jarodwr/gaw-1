@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import floorplanImage from '../../assets/4br.png'
 import { Button, Frame, Window, WindowContent, WindowHeader } from "react95";
 import { useStore } from '../../store'
